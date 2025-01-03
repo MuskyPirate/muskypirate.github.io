@@ -6,7 +6,7 @@
     <title>Static Layout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -45,25 +45,30 @@
             flex-grow: 1;
         }
 
+        .toc, .content, .sub-content {
+            background-color: #101827;
+        }
+
         .toc {
             flex: 1;
             padding: 20px;
-            background-color: #1e293b;
             overflow-y: auto;
         }
 
         .content {
             flex: 2;
             padding: 20px;
-            background-color: #27344e;
             overflow-y: auto;
         }
 
         .sub-content {
             flex: 1;
             padding: 20px;
-            background-color: #1e293b;
             overflow-y: auto;
+        }
+
+        h2 {
+            font-family: "Silkscreen", sans-serif;
         }
 
         @media (max-width: 768px) {
@@ -101,20 +106,16 @@
     </div>
     <div class="main-content">
         <div class="toc">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li>Section 1</li>
-                <li>Section 2</li>
-                <li>Section 3</li>
-            </ul>
+            <h2>About Me</h2>
+            <p>Details about me go here.</p>
         </div>
         <div class="content">
-            <h2>Main Content</h2>
-            <p>This is where the selected content will be displayed.</p>
+            <h2>Resume</h2>
+            <p>This is where my professional experience and education are displayed.</p>
         </div>
         <div class="sub-content">
-            <h2>Sub Content</h2>
-            <p>Details related to the main content go here.</p>
+            <h2>Write Ups</h2>
+            <p>Here are some interesting write-ups and blog posts.</p>
         </div>
     </div>
 </body>
