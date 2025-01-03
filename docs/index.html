@@ -19,8 +19,9 @@
         }
 
         .header img {
-            width: 20%; /* Make the logo size a percentage of the container */
-            max-width: 1500px; /* Ensure it doesn't get too large on larger screens */
+            width: 20%; /* Responsive size */
+            max-width: 150px; /* Cap size for large screens */
+            min-width: 80px; /* Ensure the logo doesn't become too small */
             height: auto; /* Maintain aspect ratio */
         }
         
@@ -31,33 +32,35 @@
             position: sticky;
             top: 0;
             background-color: #101827;
-            padding: 20px; /* Default padding for larger screens */
+            padding: 20px; /* Default padding */
             z-index: 100;
         }
         
         /* Media query for smaller screens */
         @media (max-width: 768px) {
             .header {
-                padding: 10px; /* Reduce padding on smaller screens */
+                padding: 15px; /* Reduced padding but not too small */
             }
             
             .header img {
-                width: 30%; /* Increase logo size relative to smaller screen */
-                max-width: 100px; /* Adjust max size for smaller devices */
+                width: 25%; /* Slightly larger relative width */
+                max-width: 120px; /* Ensure it scales appropriately */
+                min-width: 80px; /* Prevent the logo from shrinking too much */
             }
         }
         
         @media (max-width: 480px) {
             .header {
-                padding: 5px; /* Further reduce padding for very small screens */
+                padding: 10px; /* Minimum padding */
             }
             
             .header img {
-                width: 40%; /* Make logo slightly larger relative to screen size */
-                max-width: 80px; /* Cap the size for very small devices */
+                width: 30%; /* Larger relative width on very small screens */
+                max-width: 100px; /* Cap size for very small devices */
+                min-width: 80px; /* Maintain minimum size */
             }
         }
-
+        
         .main-content {
             display: flex;
             flex-grow: 1;
