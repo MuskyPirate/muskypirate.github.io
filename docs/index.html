@@ -17,6 +17,11 @@
             flex-direction: column;
             height: 100vh;
         }
+       
+       .header img {
+        width: 150px; /* Change size as needed */
+        height: auto; /* Maintain aspect ratio */
+       }
 
         .header {
             display: flex;
@@ -27,17 +32,6 @@
             background-color: #101827;
             padding: 20px;
             z-index: 100;
-        }
-
-        .header img {
-            max-height: 50px;
-            margin-right: 10px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2rem;
-            font-family: "Mr Dafoe", serif;
         }
 
         .main-content {
@@ -109,7 +103,6 @@
 <body>
     <div class="header">
         <img src="header.001.png" alt="Logo">
-        <h1>Musky Pirate</h1>
     </div>
     <div class="main-content">
         <div class="toc">
