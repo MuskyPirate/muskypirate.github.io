@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #101827;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            background-color: #101827;
+            padding: 20px;
+            z-index: 100;
+        }
+
+        .header img {
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-family: "Mr Dafoe", serif;
+        }
+
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .toc {
+            flex: 1;
+            padding: 20px;
+            background-color: #1e293b;
+            overflow-y: auto;
+        }
+
+        .content {
+            flex: 2;
+            padding: 20px;
+            background-color: #27344e;
+            overflow-y: auto;
+        }
+
+        .sub-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #1e293b;
+            overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .toc, .sub-content {
+                flex: none;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                flex: none;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .header img {
+                max-height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="your-logo.png" alt="Logo">
+        <h1>Musky Pirate</h1>
+    </div>
+    <div class="main-content">
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li>Section 1</li>
+                <li>Section 2</li>
+                <li>Section 3</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This is where the selected content will be displayed.</p>
+        </div>
+        <div class="sub-content">
+            <h2>Sub Content</h2>
+            <p>Details related to the main content go here.</p>
+        </div>
+    </div>
+</body>
+</html>
