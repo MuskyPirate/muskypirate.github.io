@@ -45,30 +45,37 @@
             flex-grow: 1;
         }
 
-        .toc, .content, .sub-content {
-            background-color: #101827;
-        }
-
         .toc {
             flex: 1;
             padding: 20px;
+            background-color: #101827;
             overflow-y: auto;
         }
 
         .content {
             flex: 2;
             padding: 20px;
+            background-color: #101827;
             overflow-y: auto;
         }
 
         .sub-content {
             flex: 1;
             padding: 20px;
+            background-color: #101827;
             overflow-y: auto;
         }
 
-        h2 {
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
             font-family: "Silkscreen", sans-serif;
+            font-size: 1.2rem;
+            color: #00b1fd;
+            margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
@@ -106,16 +113,19 @@
     </div>
     <div class="main-content">
         <div class="toc">
-            <h2>About Me</h2>
-            <p>Details about me go here.</p>
+            <ul>
+                <li>About Me</li>
+                <li>Resume</li>
+                <li>Write Ups</li>
+            </ul>
         </div>
         <div class="content">
-            <h2>Resume</h2>
-            <p>This is where my professional experience and education are displayed.</p>
+            <h2>Main Content</h2>
+            <p>This is where the selected content will be displayed.</p>
         </div>
         <div class="sub-content">
-            <h2>Write Ups</h2>
-            <p>Here are some interesting write-ups and blog posts.</p>
+            <h2>Sub Content</h2>
+            <p>Details related to the main content go here.</p>
         </div>
     </div>
 </body>
