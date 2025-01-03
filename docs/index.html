@@ -17,12 +17,13 @@
             flex-direction: column;
             height: 100vh;
         }
-       
-       .header img {
-        width: 500px; /* Change size as needed */
-        height: auto; /* Maintain aspect ratio */
-       }
 
+        .header img {
+            width: 20%; /* Make the logo size a percentage of the container */
+            max-width: 1500px; /* Ensure it doesn't get too large on larger screens */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
         .header {
             display: flex;
             align-items: center;
@@ -30,8 +31,31 @@
             position: sticky;
             top: 0;
             background-color: #101827;
-            padding: 20px;
+            padding: 20px; /* Default padding for larger screens */
             z-index: 100;
+        }
+        
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+            
+            .header img {
+                width: 30%; /* Increase logo size relative to smaller screen */
+                max-width: 100px; /* Adjust max size for smaller devices */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 5px; /* Further reduce padding for very small screens */
+            }
+            
+            .header img {
+                width: 40%; /* Make logo slightly larger relative to screen size */
+                max-width: 80px; /* Cap the size for very small devices */
+            }
         }
 
         .main-content {
